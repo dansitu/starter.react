@@ -1,0 +1,25 @@
+{
+  "name": "3dcontrol",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "watch 'npm run build:js' client/src",
+    "build:js": "./node_modules/browserify/bin/cmd.js -t [ babelify --presets [ react ] ] client/src/app.jsx -o client/build/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "watch": "^0.17.1"
+  }
+}
